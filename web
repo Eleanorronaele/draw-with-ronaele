@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistem Absensi QR Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #0066cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 26px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .menu a {
+            padding: 12px 20px;
+            background: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+        .menu a:hover {
+            background: #004999;
+        }
+        h2 {
+            text-align: center;
+        }
+        .form-box {
+            width: 100%;
+            margin-top: 20px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        button {
+            margin-top: 15px;
+            padding: 12px;
+            background: #28a745;
+            color: white;
+            border: none;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+        button:hover {
+            background: #1f7f35;
+        }
+        .qr-list img {
+            width: 150px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>Sistem Absensi QR Code</header>
+
+<div class="container">
+    <h2>Menu Utama</h2>
+    <div class="menu">
+        <a href="#tambah">Tambah Siswa</a>
+        <a href="#scan">Scan QR</a>
+        <a href="#qr">Daftar QR</a>
+        <a href="#rekap">Rekap Absensi</a>
+    </div>
+</div>
+
+<div class="container" id="tambah">
+    <h2>Tambah Data Siswa</h2>
+    <div class="form-box">
+        <label>Nama Siswa</label>
+        <input type="text" placeholder="Masukkan nama siswa" />
+
+        <label>Kelas</label>
+        <select>
+            <option>X</option>
+            <option>XI</option>
+            <option>XII</option>
+        </select>
+
+        <button>Generate QR Code</button>
+    </div>
+</div>
+
+<div class="container" id="scan">
+    <h2>Scan QR Code</h2>
+    <p style="text-align:center;">(Area Kamera)</p>
+    <div style="background:#ddd; height:300px; border-radius:10px;"></div>
+</div>
+
+<div class="container" id="qr">
+    <h2>Daftar QR Code Siswa</h2>
+    <div class="qr-list">
+        <img src="static/qr_codes/sample.png" alt="QR Sample" />
+        <img src="static/qr_codes/sample.png" alt="QR Sample" />
+        <img src="static/qr_codes/sample.png" alt="QR Sample" />
+    </div>
+</div>
+
+<div class="container" id="rekap">
+    <h2>Rekap Absensi</h2>
+    <table border="1" width="100%" style="border-collapse: collapse; text-align:center;">
+        <tr>
+            <th>Nama</th>
+            <th>Kelas</th>
+            <th>Waktu</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>Contoh</td>
+            <td>XII RPL</td>
+            <td>07:15</td>
+            <td>Hadir</td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
